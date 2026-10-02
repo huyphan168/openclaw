@@ -79,7 +79,7 @@ async function fixture(withHeader = true) {
         ...overrides,
       });
     } finally {
-      admission.close();
+      await admission.close();
     }
   };
   const run = async <T>(
